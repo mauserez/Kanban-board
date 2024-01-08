@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	font-family: Roboto, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+	font-weight: 400;
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	--bg-dark: #0067a3;
+	--bg-light: #0079bf;
+	--default-border: #ddd;
+}
+
+html,
+body,
+* {
+	box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+	width: 12px; /* width of the entire scrollbar */
+}
+
+::-webkit-scrollbar-track {
+	background: #fff; /* color of the tracking area */
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #cbcbcb; /* color of the scroll thumb */
+	border-radius: 5px; /* roundness of the scroll thumb */
+	border: 3px solid #cbcbcb; /* creates padding around scroll thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: #bbb;
+	border: 3px solid #bbb; /* creates padding around scroll thumb */
+}
+
+#root-modal {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.portal-tooltip {
+	margin-top: 3px;
+	border-radius: 5px;
+	padding: 8px;
+	background-color: #fff;
+	border: 1px solid var(--default-border);
+}
+
+.portal-tooltip__arrow {
+	margin-top: 3px;
+	background-color: #fff;
+	width: 11px;
+	height: 11px;
+	transform: rotate(45deg);
+	position: absolute;
+	z-index: 2001;
+	border-top: 1px solid var(--default-border);
+	border-left: 1px solid var(--default-border);
+}
+
+.portal-tooltip__body {
+	z-index: 2000;
+	position: relative;
+}

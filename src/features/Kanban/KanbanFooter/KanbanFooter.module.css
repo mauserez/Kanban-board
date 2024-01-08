@@ -1,0 +1,22 @@
+.footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	color: #fff;
+	font-size: 18px;
+	flex-wrap: wrap;
+	gap: 15px;
+}
+
+.footerTasks {
+	display: flex;
+	gap: 36px;
+}
+
+@media screen and (max-width: 414px) {
+	.footerTasks {
+		justify-content: space-between;
+		width: 100%;
+	}
+}

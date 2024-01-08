@@ -1,0 +1,175 @@
+.boardWrap {
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	height: 100vh;
+}
+
+.board {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(282px, 1fr));
+	gap: 24px;
+	padding: 19px;
+	background-color: var(--bg-light);
+	align-items: start;
+	align-content: start;
+}
+
+@media screen and (max-width: 414px) {
+	.board {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 24px;
+	}
+}
+
+.card {
+	border-radius: 5px;
+	background: #ebecf0;
+	padding: 12px;
+	gap: 15px;
+	display: flex;
+	flex-direction: column;
+	max-height: 500px;
+	min-height: 100px;
+}
+
+.cardTitle {
+	font-size: 18px;
+	height: 17px;
+}
+
+.cardBody {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	overflow: auto;
+	margin-right: -12px;
+	padding-right: 12px;
+	padding-top: 8px;
+}
+
+.cardBodyItem {
+	display: flex;
+	gap: 10px;
+	align-items: flex-start;
+	border-radius: 5px;
+	background: #fff;
+	padding: 8px;
+	position: relative;
+}
+
+.cardTaskName {
+	display: flex;
+	gap: 10px;
+}
+
+.backButton {
+	align-self: flex-start;
+	color: orange;
+}
+
+.deleteTaskButton {
+	align-self: flex-start;
+	color: red;
+	position: absolute;
+	top: -10px;
+	right: -6px;
+	cursor: pointer;
+}
+
+button.addButton {
+	background-color: transparent;
+	color: #5e6c84;
+	font-size: 18px;
+	border-radius: 5px;
+	display: flex;
+	gap: 3px;
+	padding: 4px;
+	align-items: center;
+
+	&:hover {
+		background-color: #fff;
+	}
+
+	&:disabled {
+		color: rgb(190, 190, 190);
+		&:hover {
+			background-color: transparent;
+		}
+	}
+}
+
+button.cancelButton {
+	background-color: transparent;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 5px;
+	display: flex;
+	gap: 3px;
+	padding: 4px 8px;
+	align-items: center;
+	background-color: #e74848;
+}
+
+button.submitButton {
+	color: #fff;
+	text-align: center;
+	font-size: 18px;
+	background-color: #0079bf;
+	border-radius: 5px;
+	padding: 4px 8px;
+
+	&:disabled {
+		background: #bbb;
+	}
+}
+
+.newTask {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 15px;
+
+	input {
+		min-height: 40px;
+		width: 100%;
+		border-radius: 5px;
+		padding: 8px;
+	}
+}
+
+.dropDown {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.dropDownSelectItem {
+	display: flex;
+	justify-content: flex-end;
+	background-color: #fff;
+	padding: 8px;
+	min-height: 40px;
+	border-radius: 5px;
+}
+
+.dropDownList {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	background-color: #fff;
+	border-radius: 5px;
+	max-height: 200px;
+	overflow: auto;
+	width: 100%;
+	border: 1px solid var(--default-border);
+}
+
+.dropDownItem {
+	padding: 8px;
+	min-height: 40px;
+
+	&:hover {
+		background-color: #dedede;
+	}
+}
